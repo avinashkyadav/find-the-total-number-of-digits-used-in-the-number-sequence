@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+//Write a program to find the total number of digits used in the number sequence from MIN = 12 to
+// MAX = 1200 . The program should be generically written for any MIN and MAX numbers entered by the user.
+//Example: If the user enters the MIN value = 8 and MAX value = 12; then the program should output the total number of digits used in the sequence as 8. 
+//Since the numbers to be counted are = 8, 9, 10, 11, 12
+//8 and 9 are single digits. Total digits therefore is 2 in the first two numbers.
+//10,11,12 are two digit numbers. Total digit therefore is 2 X 3 = 6 digits.
+//Thus, all the digits counted make it 8. 
+//Give your output result for the sequence of numbers from MIN Value = 12 to MAX Value = 1200.
+int main(){
+	int MIN=0; int MAX=0;	
+	cout<<"MIN limit is 12 and MAX limit is 1200"<<endl;
+	cout<<"enter the min value"<<endl;
+	cin>>MIN;
+	cout<<"enter the MAX value"<<endl;
+	cin>>MAX;
+	int temp=0;	int count=0;
+	if(MAX<=1200){
+	if(MIN>=12) {
+	for(int i=MIN; i<=MAX; i++)
+	{  
+	 temp=i;
+	while (temp != 0) { 
+    temp = temp / 10; 
+    ++count;          
+	} 
+	}	
+cout<<"Min = "<<MIN<<" "<<"Max = "<<MAX<<" "<<"count  = "<<count;
+}
+else{
+	cout<<"user input  of MIN = "<<MIN<<"  and  limit  range  of MIN  = 12 "<<endl; 
+        }  }
+		
+else { cout<<"user input  of MAX = "<<MAX<<" and  limit  range  of MAX  = 1200 "<<endl; }		
+
+		return 0;
+
+	}
+	
